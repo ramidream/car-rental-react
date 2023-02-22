@@ -12,8 +12,8 @@ export function Home() {
       <ScrollRestoration />
       <Hero></Hero>
       <Quote></Quote>
-      <Features></Features>
-      <GetFirstGiftToday />
+      {/* <Features></Features> */}
+      {/* <GetFirstGiftToday /> */}
       <FeaturedVehicles />
       <Faqs></Faqs>
     </>

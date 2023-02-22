@@ -37,7 +37,7 @@ export function VehicleCard({ vehicle }) {
           </div>
           <div>
             <p className="leading-5 text-right">
-              {discountPrice ? (
+              {/* {discountPrice ? (
                 <span className="text-[18px] text-white font-bold">
                   <span className="font-medium text-neutral-300 line-through">
                     {formatNumberAsCurrency(retailPrice)}
@@ -48,7 +48,7 @@ export function VehicleCard({ vehicle }) {
                 <span className="text-[18px] font-bold text-neutral-100">
                   {formatNumberAsCurrency(retailPrice)}
                 </span>
-              )}
+              )} */}
               <br /> <span className="font-light">/ day</span>
             </p>
           </div>

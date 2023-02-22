@@ -104,7 +104,7 @@ export function VehicleGrid() {
           open={isOpenCollapsible}
           onOpenChange={() => setIsOpenCollapsible(!isOpenCollapsible)}
         >
-          <input type="text" placeholder="Search here"  />
+          {/* <input type="text" placeholder="Search here"  /> */}
           <div className="flex flex-col lg:flex-row items-center justify-between mx-auto gap-y-6 mb-6">
             <div>
               <p className="mb-3 font-mono hidden lg:block">

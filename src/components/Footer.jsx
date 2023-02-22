@@ -7,7 +7,7 @@ export function Footer() {
       <div className="h-px">
         <div className="absolute left-0 border-neutral-800 w-full h-px border-t"></div>
       </div>
-      <div className="flex flex-row items-center">
+      {/* <div className="flex flex-row items-center">
         <div className="w-full flex flex-col md:flex-row md:items-center justify-between gap-y-20">
           <div>
             <div className="font-semibold text-3xl">
@@ -52,10 +52,10 @@ export function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-5 border-t border-neutral-900 py-8">
-        <p>© Copyright {new Date().getFullYear()}. All rights reserved.</p>
-        <p>Designed and developed by Eduardo Ambriz</p>
+        <p>For more information and reservation,<br></br> 
+          please contact our whatsapp number +902127022313.</p>
       </div>
     </footer>
   );

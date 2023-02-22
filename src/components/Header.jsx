@@ -18,17 +18,18 @@ export function Header() {
     <header className="h-28 flex flex-row items-center justify-between">
       <div className="flex flex-row items-center justify-start gap-x-20">
         <div className="font-semibold text-3xl">
-          <Link to="/">Rides</Link>
+          <Link to="/">Global Avrasya</Link>
         </div>
         <nav className="hidden md:block">
           <ul className="flex flex-row gap-x-10">
+            
+            <li className="text-neutral-300 hover:text-neutral-50 hover:transition-colors font-semibold">
+              <Link to="/vehicles">Fleet</Link>
+            </li>
             <li className="text-neutral-300 hover:text-neutral-50 hover:transition-colors font-semibold">
               <HashLink smooth to="/#features">
                 Features
               </HashLink>
-            </li>
-            <li className="text-neutral-300 hover:text-neutral-50 hover:transition-colors font-semibold">
-              <Link to="/vehicles">Fleet</Link>
             </li>
             <li className="text-neutral-300 hover:text-neutral-50 hover:transition-colors font-semibold">
               <HashLink smooth to="/#faqs">
@@ -38,7 +39,7 @@ export function Header() {
           </ul>
         </nav>
       </div>
-      <ul className="hidden md:flex flex-row gap-x-10">
+      {/* <ul className="hidden md:flex flex-row gap-x-10">
         <li>
           <button className="text-neutral-300 hover:text-neutral-50 hover:transition-colors font-semibold">
             Log In
@@ -49,7 +50,7 @@ export function Header() {
             Sign Up
           </button>
         </li>
-      </ul>
+      </ul> */}
       <div className="md:hidden">
         <Dialog open={isOpenDialog} onOpenChange={setIsOpenDialog}>
           <DialogTrigger className="visible md:hidden px-2 py-[2px] pr-0 text-neutral-300 hover:text-neutral-50 hover:transition-colors rounded-md group">
@@ -120,7 +121,7 @@ export function Header() {
                     </DialogClose>
                   </li>
                 </ul>
-                <div className="border-t border-neutral-700 my-4">
+                {/* <div className="border-t border-neutral-700 my-4">
                   <div className="flex flex-row items-center justify-between gap-x-5 mt-3">
                     <button className="text-left py-2 font-semibold text-neutral-300 hover:text-neutral-50 hover:transition-colors">
                       Download the App
@@ -136,7 +137,7 @@ export function Header() {
                       </button>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </DialogContent>
             </DialogOverlay>
           </DialogPortal>

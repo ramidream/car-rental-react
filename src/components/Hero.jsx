@@ -30,7 +30,7 @@ export function Hero() {
           </Link>
         </div>
       </div>
-      <div className="mt-16">
+      {/* <div className="mt-16">
         <p className="font-semibold mb-8 text-center lg:text-left">
           As featured in
         </p>
@@ -152,7 +152,7 @@ export function Hero() {
             </svg>
           </li>
         </ul>
-      </div>
+      </div> */}
     </section>
   );
 }
