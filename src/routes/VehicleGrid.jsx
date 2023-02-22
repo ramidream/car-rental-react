@@ -35,7 +35,7 @@ export function VehicleGrid() {
 
   const vehicles = getVehicles();
   const brands = getBrands();
-  const colors = getColors();
+  // const colors = getColors();
 
   const isFiltersActive =
     state.selectedBrands.length ||
@@ -104,6 +104,7 @@ export function VehicleGrid() {
           open={isOpenCollapsible}
           onOpenChange={() => setIsOpenCollapsible(!isOpenCollapsible)}
         >
+          <input type="text" placeholder="Search here"  />
           <div className="flex flex-col lg:flex-row items-center justify-between mx-auto gap-y-6 mb-6">
             <div>
               <p className="mb-3 font-mono hidden lg:block">
@@ -158,7 +159,7 @@ export function VehicleGrid() {
           </div>
           <CollapsibleContent>
             <section id="filters" className="mb-20">
-              <div className="grid grid-cols-1 lg:grid-cols-3 items-start gap-x-16 gap-y-10">
+              <div className="grid grid-cols-1 lg:grid-cols-1 items-start gap-x-16 gap-y-10">
                 <div>
                   <p className="font-bold text-neutral-100">
                     {`Brand ${countSelectedBrands}`}
@@ -185,7 +186,7 @@ export function VehicleGrid() {
                     })}
                   </div>
                 </div>
-                <div>
+                {/* <div>
                   <p className="font-bold text-neutral-100">
                     {`Color ${countSelectedColors}`}
                   </p>
@@ -215,8 +216,8 @@ export function VehicleGrid() {
                       );
                     })}
                   </div>
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   <p className="font-bold text-neutral-100">{`Price per Day ${
                     state.price !== state.maxPrice ? "(1)" : ""
                   }`}</p>
@@ -246,7 +247,7 @@ export function VehicleGrid() {
                       <SliderThumb className="sliderThumb" />
                     </Slider>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
           </CollapsibleContent>
