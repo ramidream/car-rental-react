@@ -18,19 +18,19 @@ export function Header() {
     <header className="h-28 flex flex-row items-center justify-between">
       <div className="flex flex-row items-center justify-start gap-x-20">
         <div className="font-semibold text-3xl">
-          <Link to="/">Global Avrasya</Link>
+          <Link to="/">Global Avrasya Filo</Link>
         </div>
         <nav className="hidden md:block">
           <ul className="flex flex-row gap-x-10">
             
             <li className="text-neutral-300 hover:text-neutral-50 hover:transition-colors font-semibold">
-              <Link to="/vehicles">Fleet</Link>
+              <Link to="/vehicles">Cars</Link>
             </li>
-            <li className="text-neutral-300 hover:text-neutral-50 hover:transition-colors font-semibold">
+            {/* <li className="text-neutral-300 hover:text-neutral-50 hover:transition-colors font-semibold">
               <HashLink smooth to="/#features">
                 Features
               </HashLink>
-            </li>
+            </li> */}
             <li className="text-neutral-300 hover:text-neutral-50 hover:transition-colors font-semibold">
               <HashLink smooth to="/#faqs">
                 FAQs
