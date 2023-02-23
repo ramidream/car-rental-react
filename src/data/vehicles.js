@@ -355,83 +355,83 @@ export const vehicles = [
       },
     ],
   },
-  {
-    id: "VEH010",
-    slug: "turboant-x7-max-folding",
-    brand: { id: "b-turboant", name: "TurboAnt" },
-    model: "X7 Max Folding",
-    year: 2021,
-    description:
-      "A electric scooter is a stand-up scooter powered by either a small utility internal combustion engine or a small electric hub motor in its front and/or rear wheel. Classified as a form of micro-mobility, they are generally designed with a large center deck on which the rider stands. The first motorized scooter was manufactured by Autoped in 1915.",
-    color: { id: "c-black", name: "black" },
-    featured: false,
-    price: {
-      perDay: { retailPrice: 47 },
-    },
-    details: {
-      transmission: "",
-      capacity: "1 adult",
-      bags: "",
-      autonomy: "35 miles (56 km)",
-    },
-    features: [
-      "Electric",
-      "10 Ah Detachable Battery",
-      "3-Step Folding",
-      "20 mph Maximum Speed",
-      "Cruise Control",
-      "15° Climb Capability",
-    ],
-    images: [
-      {
-        type: "cover",
-        alt: "Black TurboAnt X7 Max Folding Scooter",
-        urlPath: "./assets/vehicles/turboant-x7-max-folding.jpg",
-      },
-      {
-        type: "display",
-        alt: "Black TurboAnt X7 Max Folding Scooter",
-        urlPath: "./assets/vehicles/turboant-x7-max-folding.jpg",
-      },
-    ],
-  },
-  {
-    id: "VEH011",
-    slug: "bianchi-specialissima",
-    brand: { id: "b-bianchi", name: "Bianchi" },
-    model: "Specialissima",
-    year: 2020,
-    description:
-      "The Bianchi Specialissima helps you fly up the climbs and dominate on the flat. The carbon disc frame is light, just 750g, so none of your climbing power is wasted when the road turns upward, but it’s also superbly-stiff providing excellent transfer of that power to the road.",
-    color: { id: "c-white", name: "white" },
-    featured: false,
-    price: {
-      perDay: { retailPrice: 29 },
-    },
-    details: {
-      transmission: "",
-      capacity: "1 adult",
-      bags: "",
-      autonomy: "",
-    },
-    features: [
-      "Campagnolo Hydraulic Disc Brakes",
-      "Flat Mount calipers",
-      "Fulcrum Wind 400 DB Rims",
-    ],
-    images: [
-      {
-        type: "cover",
-        alt: "White Bianchi Specialissima Bike",
-        urlPath: "./assets/vehicles/bianchi-specialissima.jpg",
-      },
-      {
-        type: "display",
-        alt: "White Bianchi Specialissima Bike",
-        urlPath: "./assets/vehicles/bianchi-specialissima.jpg",
-      },
-    ],
-  },
+  // {
+  //   id: "VEH010",
+  //   slug: "turboant-x7-max-folding",
+  //   brand: { id: "b-turboant", name: "TurboAnt" },
+  //   model: "X7 Max Folding",
+  //   year: 2021,
+  //   description:
+  //     "A electric scooter is a stand-up scooter powered by either a small utility internal combustion engine or a small electric hub motor in its front and/or rear wheel. Classified as a form of micro-mobility, they are generally designed with a large center deck on which the rider stands. The first motorized scooter was manufactured by Autoped in 1915.",
+  //   color: { id: "c-black", name: "black" },
+  //   featured: false,
+  //   price: {
+  //     perDay: { retailPrice: 47 },
+  //   },
+  //   details: {
+  //     transmission: "",
+  //     capacity: "1 adult",
+  //     bags: "",
+  //     autonomy: "35 miles (56 km)",
+  //   },
+  //   features: [
+  //     "Electric",
+  //     "10 Ah Detachable Battery",
+  //     "3-Step Folding",
+  //     "20 mph Maximum Speed",
+  //     "Cruise Control",
+  //     "15° Climb Capability",
+  //   ],
+  //   images: [
+  //     {
+  //       type: "cover",
+  //       alt: "Black TurboAnt X7 Max Folding Scooter",
+  //       urlPath: "./assets/vehicles/turboant-x7-max-folding.jpg",
+  //     },
+  //     {
+  //       type: "display",
+  //       alt: "Black TurboAnt X7 Max Folding Scooter",
+  //       urlPath: "./assets/vehicles/turboant-x7-max-folding.jpg",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "VEH011",
+  //   slug: "bianchi-specialissima",
+  //   brand: { id: "b-bianchi", name: "Bianchi" },
+  //   model: "Specialissima",
+  //   year: 2020,
+  //   description:
+  //     "The Bianchi Specialissima helps you fly up the climbs and dominate on the flat. The carbon disc frame is light, just 750g, so none of your climbing power is wasted when the road turns upward, but it’s also superbly-stiff providing excellent transfer of that power to the road.",
+  //   color: { id: "c-white", name: "white" },
+  //   featured: false,
+  //   price: {
+  //     perDay: { retailPrice: 29 },
+  //   },
+  //   details: {
+  //     transmission: "",
+  //     capacity: "1 adult",
+  //     bags: "",
+  //     autonomy: "",
+  //   },
+  //   features: [
+  //     "Campagnolo Hydraulic Disc Brakes",
+  //     "Flat Mount calipers",
+  //     "Fulcrum Wind 400 DB Rims",
+  //   ],
+  //   images: [
+  //     {
+  //       type: "cover",
+  //       alt: "White Bianchi Specialissima Bike",
+  //       urlPath: "./assets/vehicles/bianchi-specialissima.jpg",
+  //     },
+  //     {
+  //       type: "display",
+  //       alt: "White Bianchi Specialissima Bike",
+  //       urlPath: "./assets/vehicles/bianchi-specialissima.jpg",
+  //     },
+  //   ],
+  // },
   {
     id: "VEH012",
     slug: "vz-flybridge",

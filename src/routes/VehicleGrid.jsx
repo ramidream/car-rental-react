@@ -125,7 +125,7 @@ export function VehicleGrid() {
                 }`}
               </p>
             </div>
-            <div className="w-full lg:w-auto flex flex-row items-center justify-between mt-10">
+            {/* <div className="w-full lg:w-auto flex flex-row items-center justify-between mt-10">
               <CollapsibleTrigger asChild>
                 <button className="collapsibleTrigger px-6 py-4 w-48 flex flex-start items-center justify-between border border-neutral-700 rounded-lg">
                   <span>{countAllSelectedFilters}</span>
@@ -155,11 +155,9 @@ export function VehicleGrid() {
                   countFilteredVehicles > 1 ? "vehicles" : "vehicle"
                 }`}
               </p>
-            </div>
+            </div> */}
           </div>
-          <CollapsibleContent>
-            <section id="filters" className="mb-20">
-              <div className="grid grid-cols-1 lg:grid-cols-1 items-start gap-x-16 gap-y-10">
+          {/* <CollapsibleContent> */}
                 <div>
                   <p className="font-bold text-neutral-100">
                     {`Brand ${countSelectedBrands}`}
@@ -186,7 +184,10 @@ export function VehicleGrid() {
                     })}
                   </div>
                 </div>
-                {/* <div>
+            {/* <section id="filters" className="mb-20">
+              <div className="grid grid-cols-1 lg:grid-cols-1 items-start gap-x-16 gap-y-10">
+                
+                <div>
                   <p className="font-bold text-neutral-100">
                     {`Color ${countSelectedColors}`}
                   </p>
@@ -216,8 +217,8 @@ export function VehicleGrid() {
                       );
                     })}
                   </div>
-                </div> */}
-                {/* <div>
+                </div>
+                <div>
                   <p className="font-bold text-neutral-100">{`Price per Day ${
                     state.price !== state.maxPrice ? "(1)" : ""
                   }`}</p>
@@ -247,10 +248,10 @@ export function VehicleGrid() {
                       <SliderThumb className="sliderThumb" />
                     </Slider>
                   </div>
-                </div> */}
+                </div>
               </div>
-            </section>
-          </CollapsibleContent>
+            </section> */}
+          {/* </CollapsibleContent> */}
 
           <section
             id="filters-selected"
