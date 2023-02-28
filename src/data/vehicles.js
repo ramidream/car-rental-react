@@ -38,6 +38,11 @@ export const vehicles = [
         alt: "White Tesla Model 3 on a road",
         urlPath: "./assets/vehicles/tesla-model-3.jpg",
       },
+      {
+        type: "display",
+        alt: "White Tesla Model 3 on a road",
+        urlPath: "./assets/vehicles/porsche-911.jpg",
+      },
     ],
   },
   {

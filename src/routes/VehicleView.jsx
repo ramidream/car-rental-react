@@ -2,6 +2,7 @@ import { Link, ScrollRestoration } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { formatNumberAsCurrency } from "../lib/utils";
 import { getVehicleBySlug } from "../lib/vehicles.js";
+import React, { useState } from 'react';
 
 export function VehicleView() {
   const { slug } = useParams();
@@ -14,6 +15,18 @@ export function VehicleView() {
 
   const retailPrice = price.perDay.retailPrice;
   const discountPrice = price.perDay.discountPrice;
+  const [index, setIndex] = useState(0); 
+  const length = 3;
+
+  const handlePrevious = () => {
+    const newIndex = index - 1;
+    setIndex(newIndex < 0 ? length - 1 : newIndex);
+  };
+
+  const handleNext = () => {
+    const newIndex = index + 1;
+    setIndex(newIndex >= length ? 0 : newIndex);
+  };
 
   return (
     <>
@@ -218,6 +231,10 @@ export function VehicleView() {
               src={displayImage.urlPath}
               alt={displayImage.alt}
             />
+          </div>
+          <div className="carousel">
+            <button onClick={handlePrevious}>Previous</button>
+            <button onClick={handleNext}>Next</button>
           </div>
         </div>
       </section>

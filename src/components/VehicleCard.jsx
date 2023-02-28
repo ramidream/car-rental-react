@@ -1,5 +1,6 @@
 import { getBackgroundColorClass } from "../lib/utils";
 import { formatNumberAsCurrency } from "../lib/utils";
+import React, { useState } from 'react';
 
 export function VehicleCard({ vehicle }) {
   const { details, price, brand, model, images, year, color } = vehicle;
@@ -10,6 +11,19 @@ export function VehicleCard({ vehicle }) {
   const retailPrice = price.perDay.retailPrice;
   const discountPrice = price.perDay.discountPrice;
   const discount = Math.round(100 - (discountPrice * 100) / retailPrice);
+
+  const [index, setIndex] = useState(0); 
+  const length = 3;
+
+  const handlePrevious = () => {
+    const newIndex = index - 1;
+    setIndex(newIndex < 0 ? length - 1 : newIndex);
+  };
+
+  const handleNext = () => {
+    const newIndex = index + 1;
+    setIndex(newIndex >= length ? 0 : newIndex);
+  };
 
   return (
     <div className="grid-rows-[15.5rem_1fr] h-full grid rounded-2xl group">
@@ -24,6 +38,10 @@ export function VehicleCard({ vehicle }) {
             {discount}% off
           </span>
         )} */}
+      </div>
+      <div className="carousel">
+        <button onClick={handlePrevious}>Previous</button>
+        <button onClick={handleNext}>Next</button>
       </div>
       <div className="w-full h-full flex flex-col justify-between gap-y-3 py-4">
         <div className="w-full grid grid-cols-2 items-baseline justify-between gap-x-2">
