@@ -148,8 +148,9 @@ export function VehicleGrid() {
               </p>
             </div>
             <div>
-              <h1 className="text-4xl lg:text-5xl font-bold">deneme</h1>
-              <span className="headerSearchText">{`${format(state.date[0].startDate, "dd/MM/yyyy")} to ${format(state.date[0].endDate, "dd/MM/yyyy")}`}</span>
+              <span className="headerSearchText">
+                {/* {`${format(state.date[0].startDate, "dd/MM/yyyy")} to ${format(state.date[0].endDate, "dd/MM/yyyy")}`} */}
+              </span>
               <DateRange
                 editableDateInputs={true}
                 onChange={item =>                       dispatch({
