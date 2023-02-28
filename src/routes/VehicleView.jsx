@@ -204,9 +204,12 @@ export function VehicleView() {
               </div>
             </div>
             <div className="mt-20">
-              <button className="font-semibold w-full flex items-center justify-center md:w-56 bg-white text-slate-900 px-2 py-3 rounded-md text-xl border hover:bg-transparent hover:text-slate-100 hover:border-slate-100 transition-colors duration-150">
-                Book this Vehicle →
-              </button>
+              {/* <Link to={`/booking`}> */}
+              <Link to={`/vehicles/${slug}/booking`}>
+                <button className="font-semibold w-full flex items-center justify-center md:w-56 bg-white text-slate-900 px-2 py-3 rounded-md text-xl border hover:bg-transparent hover:text-slate-100 hover:border-slate-100 transition-colors duration-150">
+                  Book this Vehicle →
+                </button>
+              </Link>
             </div>
           </div>
           <div className="border border-neutral-800 w-full h-[28rem] rounded-lg overflow-hidden">
