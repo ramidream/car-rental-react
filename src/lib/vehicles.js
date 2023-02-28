@@ -53,6 +53,8 @@ export const getCountSelectedBrands = (selectedBrands) =>
 export const getCountSelectedColors = (selectedColors) =>
   selectedColors.length ? `(${selectedColors.length})` : "";
 
+  
+
 export function getCountAllSelectedFilters(
   price,
   maxPrice,

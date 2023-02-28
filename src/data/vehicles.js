@@ -18,6 +18,7 @@ export const vehicles = [
       bags: "3 bags",
       autonomy: "272 miles (EPA est.)",
     },
+    bookedDates: ["YYYY-MM-DD","", ""],
     features: [
       "3.1 s 0-60 mph Aceleration",
       "Autopilot",

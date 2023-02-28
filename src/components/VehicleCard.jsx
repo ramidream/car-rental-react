@@ -19,11 +19,11 @@ export function VehicleCard({ vehicle }) {
           alt={coverImage.alt}
           className="h-full w-full object-cover object-center object-no-repeat group-hover:grayscale group-hover:scale-105 transition-all ease-in"
         />
-        {discountPrice && (
+        {/* {discountPrice && (
           <span className="absolute text-[15px] tracking-wide top-3 left-3 bg-white text-red-800 font-medium py-[3px] px-2 border border-neutral-200">
             {discount}% off
           </span>
-        )}
+        )} */}
       </div>
       <div className="w-full h-full flex flex-col justify-between gap-y-3 py-4">
         <div className="w-full grid grid-cols-2 items-baseline justify-between gap-x-2">

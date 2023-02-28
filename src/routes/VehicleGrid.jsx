@@ -3,6 +3,13 @@ import { filtersReducer, INITIAL_STATE } from "../filtersReducer";
 import { FILTER_ACTION_TYPES } from "../filterActionTypes";
 import { Link, ScrollRestoration } from "react-router-dom";
 import { VehicleCard } from "../components/VehicleCard";
+// import DatePicker from "react-datepicker";
+import { DateRange } from 'react-date-range';
+// import {useState} from 'react'
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import {format} from "date-fns"
+
 import {
   Collapsible,
   CollapsibleContent,
@@ -26,12 +33,20 @@ import {
   getCountSelectedBrands,
   getCountSelectedColors,
   getCountAllSelectedFilters,
+  getDatepicker,
 } from "../lib/vehicles";
 
 export function VehicleGrid() {
   const [state, dispatch] = useReducer(filtersReducer, INITIAL_STATE);
   const [isOpenCollapsible, setIsOpenCollapsible] = useState(false);
   const [filteredVehicles, setFilteredVehicles] = useState([]);
+  // const [date, setDate] = useState([
+  //   {
+  //     startDate: new Date(),
+  //     endDate: new Date(),
+  //     key: 'selection'
+  //   }
+  // ]);
 
   const vehicles = getVehicles();
   const brands = getBrands();
@@ -51,6 +66,8 @@ export function VehicleGrid() {
 
   const isColorSelected = (color) =>
     state.selectedColors.find((currentColor) => currentColor === color.id);
+
+  
 
   const countSelectedBrands = getCountSelectedBrands(state.selectedBrands);
   const countSelectedColors = getCountSelectedColors(state.selectedColors);
@@ -74,7 +91,9 @@ export function VehicleGrid() {
         ...vehicle,
       };
     });
-
+    // if (date) {
+    //   console.log("date range changed " + date);
+    // }
     if (state.selectedBrands.length) {
       tempVehicles = tempVehicles.filter((vehicle) =>
         state.selectedBrands.includes(vehicle.brand.id)
@@ -100,6 +119,9 @@ export function VehicleGrid() {
     <>
       <ScrollRestoration />
       <section>
+      
+      
+
         <Collapsible
           open={isOpenCollapsible}
           onOpenChange={() => setIsOpenCollapsible(!isOpenCollapsible)}
@@ -125,6 +147,22 @@ export function VehicleGrid() {
                 }`}
               </p>
             </div>
+            <div>
+              <h1 className="text-4xl lg:text-5xl font-bold">deneme</h1>
+              <span className="headerSearchText">{`${format(state.date[0].startDate, "dd/MM/yyyy")} to ${format(state.date[0].endDate, "dd/MM/yyyy")}`}</span>
+              <DateRange
+                editableDateInputs={true}
+                onChange={item =>                       dispatch({
+                  type: FILTER_ACTION_TYPES.CHANGE_DATE,
+                  payload: { dateRange: [item.selection] },
+                })}
+                // setDate([item.selection]
+                moveRangeOnFirstSelection={false}
+                ranges={state.date}
+                className="date"
+              />
+            </div>
+
             {/* <div className="w-full lg:w-auto flex flex-row items-center justify-between mt-10">
               <CollapsibleTrigger asChild>
                 <button className="collapsibleTrigger px-6 py-4 w-48 flex flex-start items-center justify-between border border-neutral-700 rounded-lg">
@@ -158,6 +196,8 @@ export function VehicleGrid() {
             </div> */}
           </div>
           {/* <CollapsibleContent> */}
+          
+           
                 <div>
                   <p className="font-bold text-neutral-100">
                     {`Brand ${countSelectedBrands}`}

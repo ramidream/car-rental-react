@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Root, Home, VehicleGrid, VehicleView, NotFound } from "./routes";
+import { Root, Home, VehicleGrid, VehicleView, Booking, NotFound } from "./routes";
 import "./main.css";
 
 const router = createBrowserRouter(
@@ -19,6 +19,11 @@ const router = createBrowserRouter(
         {
           path: "/vehicles/:slug",
           element: <VehicleView />,
+        },
+        {
+          // path: "/vehicles/:slug/booking",
+          path: "/vehicles/:slug/booking",
+          element: <Booking />,
         },
         {
           path: "*",

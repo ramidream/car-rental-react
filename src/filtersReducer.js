@@ -1,4 +1,6 @@
 import { FILTER_ACTION_TYPES } from "./filterActionTypes";
+import { DateRange } from 'react-date-range';
+
 
 import {
   getVehiclesMaxPricePerDay,
@@ -14,6 +16,11 @@ const INITIAL_STATE = {
   price: maxPrice,
   minPrice,
   maxPrice,
+  date: [{
+    startDate: new Date(),
+    endDate: new Date(),
+    key: 'selection'
+  }],
 };
 
 function filtersReducer(state, action) {
@@ -33,6 +40,12 @@ function filtersReducer(state, action) {
       return {
         ...state,
         selectedBrands: updatedBrandSelection,
+      };
+    case FILTER_ACTION_TYPES.CHANGE_DATE:
+      
+      return {
+        ...state,
+        date: payload.dateRange,
       };
     case FILTER_ACTION_TYPES.TOGGLE_COLOR_SELECTION:
       const colorIsSelected = state.selectedColors.find(
