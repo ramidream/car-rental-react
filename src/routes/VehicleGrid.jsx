@@ -8,32 +8,32 @@ import { DateRange } from 'react-date-range';
 // import {useState} from 'react'
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import {format} from "date-fns"
+// import {format} from "date-fns"
 
 import {
   Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
+  // CollapsibleContent,
+  // CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
-import {
-  Slider,
-  SliderTrack,
-  SliderRange,
-  SliderThumb,
-} from "@radix-ui/react-slider";
+// import {
+//   Slider,
+//   SliderTrack,
+//   SliderRange,
+//   SliderThumb,
+// } from "@radix-ui/react-slider";
 import classNames from "classnames";
-import { getBackgroundColorClass } from "../lib/utils";
+// import { getBackgroundColorClass } from "../lib/utils";
 import { formatNumberAsCurrency } from "../lib/utils";
 import {
   getBrands,
-  getColors,
+  // getColors,
   getBrandById,
   getColorById,
   getVehicles,
   getCountSelectedBrands,
-  getCountSelectedColors,
+  // getCountSelectedColors,
   getCountAllSelectedFilters,
-  getDatepicker,
+  // getDatepicker,
 } from "../lib/vehicles";
 
 export function VehicleGrid() {
@@ -64,19 +64,19 @@ export function VehicleGrid() {
   const isBrandSelected = (brand) =>
     state.selectedBrands.find((currentBrand) => currentBrand === brand.id);
 
-  const isColorSelected = (color) =>
-    state.selectedColors.find((currentColor) => currentColor === color.id);
+  // const isColorSelected = (color) =>
+  //   state.selectedColors.find((currentColor) => currentColor === color.id);
 
   
 
   const countSelectedBrands = getCountSelectedBrands(state.selectedBrands);
-  const countSelectedColors = getCountSelectedColors(state.selectedColors);
-  const countAllSelectedFilters = getCountAllSelectedFilters(
-    state.price,
-    state.maxPrice,
-    state.selectedBrands,
-    state.selectedColors
-  );
+  // const countSelectedColors = getCountSelectedColors(state.selectedColors);
+  // const countAllSelectedFilters = getCountAllSelectedFilters(
+  //   state.price,
+  //   state.maxPrice,
+  //   state.selectedBrands,
+  //   state.selectedColors
+  // );
   const countFilteredVehicles = filteredVehicles.length;
 
   useEffect(() => {
@@ -148,7 +148,7 @@ export function VehicleGrid() {
               </p>
             </div>
             <div>
-              <span className="headerSearchText">
+              <span className="headerSearchText ">
                 {/* {`${format(state.date[0].startDate, "dd/MM/yyyy")} to ${format(state.date[0].endDate, "dd/MM/yyyy")}`} */}
               </span>
               <DateRange

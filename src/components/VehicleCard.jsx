@@ -1,16 +1,16 @@
 import { getBackgroundColorClass } from "../lib/utils";
-import { formatNumberAsCurrency } from "../lib/utils";
+// import { formatNumberAsCurrency } from "../lib/utils";
 import React, { useState } from 'react';
 
 export function VehicleCard({ vehicle }) {
-  const { details, price, brand, model, images, year, color } = vehicle;
+  const { details,  brand, model, images, year, color } = vehicle;
 
   const backgroundColorClass = getBackgroundColorClass(color.name);
   const coverImage = images.find((image) => image.type === "cover");
 
-  const retailPrice = price.perDay.retailPrice;
-  const discountPrice = price.perDay.discountPrice;
-  const discount = Math.round(100 - (discountPrice * 100) / retailPrice);
+  // const retailPrice = price.perDay.retailPrice;
+  // const discountPrice = price.perDay.discountPrice;
+  // const discount = Math.round(100 - (discountPrice * 100) / retailPrice);
 
   const [index, setIndex] = useState(0); 
   const length = 3;

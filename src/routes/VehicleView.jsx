@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { formatNumberAsCurrency } from "../lib/utils";
 import { getVehicleBySlug } from "../lib/vehicles.js";
 import React, { useState } from 'react';
+// import DatePicker from 'material-ui/DatePicker';
 
 export function VehicleView() {
   const { slug } = useParams();
