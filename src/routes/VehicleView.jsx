@@ -4,6 +4,7 @@ import { formatNumberAsCurrency } from "../lib/utils";
 import { getVehicleBySlug } from "../lib/vehicles.js";
 import React, { useState } from 'react';
 // import DatePicker from 'material-ui/DatePicker';
+// import { images } from "../data/vehicles.js";
 
 export function VehicleView() {
   const { slug } = useParams();
@@ -12,23 +13,41 @@ export function VehicleView() {
   const { brand, model, year, description, images, price, details, features } =
     vehicle;
 
-  const displayImage = images.find((image) => image.type === "display");
+  // let displayImage = images.find((image) => image.type === "display");
 
   const retailPrice = price.perDay.retailPrice;
   const discountPrice = price.perDay.discountPrice;
-  const [index, setIndex] = useState(0); 
+  const [index, setIndex] = useState(0);
+  const [displayImage, setDisplayImage] = useState(images[0]);
+
   const length = 3;
 
+  // const handlePrevious = () => {
+  //   const newIndex = id - 1;
+  //   setIndex(newIndex < 0 ? length - 1 : newIndex);
+  //   displayImage = images.find((image) => images[newIndex]);
+  // };
   const handlePrevious = () => {
-    const newIndex = index - 1;
-    setIndex(newIndex < 0 ? length - 1 : newIndex);
+    const newIndex = (index - 1 + length) % length;
+    setIndex(newIndex);
+    const newImage = images[newIndex];
+    setDisplayImage(newImage);
   };
+  
 
+  // const handleNext = () => {
+  //   const newIndex = id + 1;
+  //   setIndex(newIndex >= length ? 0 : newIndex);
+  //   // return images[newIndex];
+  //   displayImage = images.find((image) => images[newIndex]);
+  // };
   const handleNext = () => {
-    const newIndex = index + 1;
-    setIndex(newIndex >= length ? 0 : newIndex);
+    const newIndex = (index + 1) % length;
+    setIndex(newIndex);
+    const newImage = images[newIndex];
+    setDisplayImage(newImage);
   };
-
+  
   return (
     <>
       <ScrollRestoration />

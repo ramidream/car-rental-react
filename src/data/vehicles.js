@@ -29,20 +29,24 @@ export const vehicles = [
     ],
     images: [
       {
+        // id:0,
         type: "cover",
         alt: "White Tesla Model 3 on a road",
         urlPath: "./assets/vehicles/tesla-model-3.jpg",
       },
       {
-        type: "display",
-        alt: "White Tesla Model 3 on a road",
-        urlPath: "./assets/vehicles/tesla-model-3.jpg",
-      },
-      {
+        // id:2,
         type: "display",
         alt: "White Tesla Model 3 on a road",
         urlPath: "./assets/vehicles/porsche-911.jpg",
       },
+      {
+        // id:1,
+        type: "display",
+        alt: "White Tesla Model 3 on a road",
+        urlPath: "./assets/vehicles/tesla-model-3.jpg",
+      },
+      
     ],
   },
   {
