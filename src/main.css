@@ -86,3 +86,81 @@ span.bigger {
 .sliderThumb:focus {
   @apply outline-none ring-2 ring-neutral-300;
 }
+
+.carousel-container::before,
+.carousel-container::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-color: #4a5568;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* .carousel-container::before {
+  left: 1rem;
+}
+
+.carousel-container::after {
+  right: 1rem;
+} */
+
+.carousel-container:hover::before,
+.carousel-container:hover::after {
+  background-color: #718096;
+}
+
+.buttonrt {
+  background-color: #4a5568;
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 110px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 0px;
+
+  transition: background-color 0.2s ease-in-out;
+}
+
+.buttonrt:hover {
+  background-color: #718096;
+}
+.buttonlt {
+  background-color: #4a5568;
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 110px;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 0px;
+  position: sticky;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.buttonlt:hover {
+  background-color: #718096;
+}
+
+.img {
+  width: 100%;
+  display:grid;
+}
+
+@media screen and (min-width: 640px) {
+  .img {
+    width: 90%;
+  }
+}

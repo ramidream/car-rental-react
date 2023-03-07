@@ -20,7 +20,7 @@ export function VehicleView() {
   const [index, setIndex] = useState(0);
   const [displayImage, setDisplayImage] = useState(images[0]);
 
-  const length = 3;
+  const length = images.length;
 
   // const handlePrevious = () => {
   //   const newIndex = id - 1;
@@ -245,17 +245,49 @@ export function VehicleView() {
               </Link>
             </div>
           </div>
-          <div className="border border-neutral-800 w-full h-[28rem] rounded-lg overflow-hidden">
-            <img
-              className="w-full h-full object-cover object-center"
-              src={displayImage.urlPath}
-              alt={displayImage.alt}
-            />
-          </div>
-          <div className="carousel">
-            <button onClick={handlePrevious}>Previous</button>
-            <button onClick={handleNext}>Next</button>
-          </div>
+            <div className="carousel">
+              <div className="relative">
+                <div className="border border-neutral-800 rounded-lg overflow-hidden">
+                  <div className="w-49 px h-40 px">
+                    <img
+                      className="w-full h-full object-cover object-center"
+                      src={displayImage.urlPath}
+                      alt={displayImage.alt}
+                    />
+                  </div>
+                </div>
+                
+                {/* <div className="carousel">  */}
+                
+                <button
+                  className="absolute top-1/2 -translate-y-1/2 bg-transparent text-2xl text-neutral-8000 z-10"
+                  onClick={handlePrevious}
+                >
+                  &lt;
+                </button>
+                <button
+                  className="absolute top-1/2 -translate-y-1/2 right-0 bg-transparent text-2xl text-neutral-8000 z-10"
+                  onClick={handleNext}
+                >
+                  &gt;
+                </button>
+                <button className="buttonlt" onClick={handlePrevious}>Previous</button>
+                <button className="buttonrt" onClick={handleNext}>Next</button>
+              </div>
+              <div className="carousel flex justify-center space-x-4 mt-4">
+                {images.map((image, idx) => (
+                  <button
+                    key={idx}
+                    className={`${
+                      idx === index ? "text-neutral-800" : "text-neutral-300"
+                    } text-2xl`}
+                    onClick={() => setIndex(idx)}
+                  >
+                    &bull;
+                  </button>
+                ))}
+              </div>
+            </div>  
         </div>
       </section>
     </>
